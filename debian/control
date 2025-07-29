@@ -1,0 +1,12 @@
+Source: ros-jazzy-type-description-interfaces
+Section: misc
+Priority: optional
+Maintainer: William Woodall <william@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), ros-jazzy-ament-cmake, ros-jazzy-ament-lint-auto <!nocheck>, ros-jazzy-ament-lint-common <!nocheck>, ros-jazzy-rosidl-core-generators, ros-jazzy-service-msgs, ros-jazzy-ros-workspace, ros-jazzy-rosidl-typesupport-fastrtps-c, ros-jazzy-rosidl-typesupport-fastrtps-cpp
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-type-description-interfaces
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-jazzy-rosidl-core-runtime, ros-jazzy-service-msgs, ros-jazzy-ros-workspace
+Description: A package containing message and service definitions for describing and communicating descriptions of other types.
