@@ -7,9 +7,10 @@ if(NOT CMAKE_C_STANDARD)
   set(CMAKE_C_STANDARD 11)
 endif()
 
-# Default to C++14
+# Default to C++17
 if(NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 14)
+  set(CMAKE_CXX_STANDARD 17)
+  set(CMAKE_CXX_STANDARD_REQUIRED ON)
 endif()
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -56,6 +57,10 @@ if(BUILD_TESTING)
     test/test_cpp_type_support.cpp)
   target_link_libraries(test_action_typesupport_cpp_builds
     "${cpp_typesupport_target}")
+
+  if(TEST cpplint_rosidl_generated_cpp)
+    set_tests_properties(cpplint_rosidl_generated_cpp PROPERTIES TIMEOUT 180)
+  endif()
 endif()
 
 if(DEFINED PYTHON_INSTALL_DIR)

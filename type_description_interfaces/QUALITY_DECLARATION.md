@@ -1,8 +1,8 @@
-This document is a declaration of software quality for the `builtin_interfaces` package, based on the guidelines in [REP-2004](https://www.ros.org/reps/rep-2004.html).
+This document is a declaration of software quality for the `type_description_interfaces` package, based on the guidelines in [REP-2004](https://www.ros.org/reps/rep-2004.html).
 
-# `builtin_interfaces` Quality Declaration
+# `type_description_interfaces` Quality Declaration
 
-The package `builtin_interfaces` claims to be in the **Quality Level 1** category as long as it is used with a **Quality Level 1** middleware.
+The package `type_description_interfaces` claims to be in the **Quality Level 1** category as long as it is used with a **Quality Level 1** middleware.
 
 Below are the rationales, notes, and caveats for this claim, organized by each requirement listed in the [Package Requirements for Quality Level 1 in REP-2004](https://www.ros.org/reps/rep-2004.html).
 
@@ -10,11 +10,11 @@ Below are the rationales, notes, and caveats for this claim, organized by each r
 
 ### Version Scheme [1.i]
 
-`builtin_interfaces` uses `semver` according to the recommendation for ROS Core packages in the [ROS 2 Developer Guide](https://docs.ros.org/en/rolling/Contributing/Developer-Guide.html#versioning).
+`type_description_interfaces` uses `semver` according to the recommendation for ROS Core packages in the [ROS 2 Developer Guide](https://docs.ros.org/en/rolling/Contributing/Developer-Guide.html#versioning).
 
 ### Version Stability [1.ii]
 
-`builtin_interfaces` is at a stable version, i.e. `>= 1.0.0`.
+`type_description_interfaces` is at a stable version, i.e. `>= 1.0.0`.
 Its version can be found in its [package.xml](package.xml) and its change history can be found in its [CHANGELOG](CHANGELOG.rst).
 
 ### Public API Declaration [1.iii]
@@ -23,15 +23,15 @@ All message and service definition files located in `msg` and `srv` directories 
 
 ### API Stability Within a Released ROS Distribution [1.iv]/[1.vi]
 
-`builtin_interfaces` will not break public API within a released ROS distribution, i.e. no major releases once the ROS distribution is released.
+`type_description_interfaces` will not break public API within a released ROS distribution, i.e. no major releases once the ROS distribution is released.
 
 ### ABI Stability Within a Released ROS Distribution [1.v]/[1.vi]
 
-`builtin_interfaces` does not contain any C or C++ code and therefore will not affect ABI stability.
+`type_description_interfaces` does not contain any C or C++ code and therefore will not affect ABI stability.
 
 ## Change Control Process [2]
 
-`builtin_interfaces` follows the recommended guidelines for ROS Core packages in the [ROS 2 Developer Guide](https://docs.ros.org/en/rolling/Contributing/Developer-Guide.html#quality-practices).
+`type_description_interfaces` follows the recommended guidelines for ROS Core packages in the [ROS 2 Developer Guide](https://docs.ros.org/en/rolling/Contributing/Developer-Guide.html#quality-practices).
 
 ### Change Requests [2.i]
 
@@ -57,16 +57,16 @@ All pull requests must resolve related documentation changes before merging.
 
 ### Feature Documentation [3.i]
 
-`builtin_interfaces` has a list of provided [messages and services](README.md).
+`type_description_interfaces` has a list of provided [messages and services](README.md).
 New messages and services require their own documentation in order to be added.
 
 ### Public API Documentation [3.ii]
 
-`builtin_interfaces` has embedded API documentation, but it is not currently hosted.
+`type_description_interfaces` has embedded API documentation, but it is not currently hosted.
 
 ### License [3.iii]
 
-The license for `builtin_interfaces` is Apache 2.0, the type is declared in the [package.xml](package.xml) manifest file, and a full copy of the license is in the repository level [LICENSE](../LICENSE) file.
+The license for `type_description_interfaces` is Apache 2.0, the type is declared in the [package.xml](package.xml) manifest file, and a full copy of the license is in the repository level [LICENSE](../LICENSE) file.
 
 There is an automated test which runs a linter that ensures each file has a license statement.
 
@@ -74,7 +74,7 @@ The nightly test can be found at [here](http://build.ros2.org/view/Rpr/job/Rpr__
 
 ### Copyright Statements [3.iv]
 
-The copyright holders each provide a statement of copyright in each source code file in `builtin_interfaces`.
+The copyright holders each provide a statement of copyright in each source code file in `type_description_interfaces`.
 
 There is an automated test which runs a linter that ensures each file has at least one copyright statement.
 
@@ -82,24 +82,24 @@ The nightly test can be found at [here](http://build.ros2.org/view/Rpr/job/Rpr__
 
 ## Testing [4]
 
-`builtin_interfaces` is a package providing strictly message and service definitions and therefore does not require associated tests and has no coverage or performance requirements.
+`type_description_interfaces` is a package providing strictly message and service definitions and therefore does not require associated tests and has no coverage or performance requirements.
 
 ## Dependencies [5]
 
 ### Direct Runtime ROS Dependencies [5.i]/[5.ii]
 
-`builtin_interfaces` has the following ROS dependencies, which are at **Quality Level 1**:
+`type_description_interfaces` has the following ROS dependencies, which are at **Quality Level 1**:
 * `rosidl_core_runtime`: [QUALITY DECLARATION](https://github.com/ros2/rosidl_core/tree/master/rosidl_core_runtime/QUALITY_DECLARATION.md)
 
 It has several "buildtool" dependencies, which do not affect the resulting quality of the package, because they do not contribute to the public library API.
 
 ### Direct Runtime Non-ROS Dependencies [5.iii]
 
-`builtin_interfaces` does not have any runtime non-ROS dependencies.
+`type_description_interfaces` does not have any runtime non-ROS dependencies.
 
 ## Platform Support [6]
 
-`builtin_interfaces` supports all of the tier 1 platforms as described in [REP-2000](https://www.ros.org/reps/rep-2000.html#support-tiers), and tests each change against all of them.
+`type_description_interfaces` supports all of the tier 1 platforms as described in [REP-2000](https://www.ros.org/reps/rep-2000.html#support-tiers), and tests each change against all of them.
 
 Currently nightly results can be seen here:
 * [linux-aarch64_release](https://ci.ros2.org/view/nightly/job/nightly_linux-aarch64_release/lastBuild/testReport/builtin_interfaces/)
