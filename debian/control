@@ -1,0 +1,12 @@
+Source: ros-jazzy-action-msgs
+Section: misc
+Priority: optional
+Maintainer: Geoffrey Biggs <geoff@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), ros-jazzy-ament-cmake, ros-jazzy-ament-lint-auto <!nocheck>, ros-jazzy-ament-lint-common <!nocheck>, ros-jazzy-builtin-interfaces, ros-jazzy-rosidl-core-generators, ros-jazzy-service-msgs, ros-jazzy-unique-identifier-msgs, ros-jazzy-ros-workspace, ros-jazzy-rosidl-typesupport-fastrtps-c, ros-jazzy-rosidl-typesupport-fastrtps-cpp
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-jazzy-action-msgs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-jazzy-builtin-interfaces, ros-jazzy-rosidl-core-runtime, ros-jazzy-service-msgs, ros-jazzy-unique-identifier-msgs, ros-jazzy-ros-workspace
+Description: Messages and service definitions common among all ROS actions.
